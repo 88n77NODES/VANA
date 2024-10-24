@@ -6,6 +6,18 @@ nc='\033[0m'
 echo -e "${green}====================================================${nc}"
 echo -e "${green}Встановлення валідатора...${nc}"
 
+# Встановлюємо poetry, якщо він не встановлений
+if ! command -v poetry &> /dev/null
+then
+    echo -e "${green}Poetry не знайдено. Встановлюємо poetry...${nc}"
+    curl -sSL https://install.python-poetry.org | python3 -
+    
+    # Додаємо poetry до PATH
+    export PATH="$HOME/.local/bin:$PATH"
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
+fi
+
 # Витягуємо публічний ключ
 echo -e "${green}Витягуємо публічний ключ...${nc}"
 cat /root/vana-dlp-chatgpt/public_key_base64.asc
