@@ -3,6 +3,7 @@
 green='\033[0;32m'
 nc='\033[0m' 
 
+echo -e "${GREEN}====================================================${RESET}"
 echo -e "${green}Оновлюємо та встановлюємо необхідні пакети...${nc}"
 sudo apt update && sudo apt upgrade -y
 
