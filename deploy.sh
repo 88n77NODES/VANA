@@ -8,7 +8,6 @@ echo -e "${green}Деплой Moksha...${nc}"
 echo -e "${green}Зупиняємо ноду...${nc}"
 sudo systemctl stop vana.service
 
-# Деплой смарт-контракту DLP
 echo -e "${green}Видаляємо папку і завантажуємо нову та переходимо до неї...${nc}"
 cd $HOME
 rm -rf vana-dlp-smart-contracts

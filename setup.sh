@@ -45,7 +45,7 @@ echo -e "${green}Клонуємо репозиторій і заходимо д�
 git clone https://github.com/vana-com/vana-dlp-chatgpt.git
 cd vana-dlp-chatgpt
 
-cp .env.example .env
+cp .env.example .env 
 
 echo -e "${green}Встановити залежності...${nc}"
 poetry install

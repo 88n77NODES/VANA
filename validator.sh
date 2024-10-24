@@ -68,3 +68,4 @@ sudo systemctl status vana.service
 
 echo -e "${green}Перевіряємо логи...${nc}"
 sudo journalctl -u vana.service -f
+ 
