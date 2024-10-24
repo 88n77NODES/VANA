@@ -7,11 +7,11 @@ wget https://raw.githubusercontent.com/88n77/Logo-88n77/main/logo.sh
 chmod +x logo.sh
 ./logo.sh
 
-setup_url="" 
-update_url="" 
-delete_url="" 
-deploy_dlp_url="" 
-validator_setup_url="" 
+setup_url=". <(wget -qO - https://raw.githubusercontent.com/88n77NODES/VANA/main/setup.sh)" 
+update_url=". <(wget -qO - https://raw.githubusercontent.com/88n77NODES/VANA/main/update.sh)" 
+delete_url=". <(wget -qO - https://raw.githubusercontent.com/88n77NODES/VANA/main/delete.sh)" 
+deploy_dlp_url=". <(wget -qO - https://raw.githubusercontent.com/88n77NODES/VANA/main/deploy.sh)" 
+validator_setup_url=". <(wget -qO - https://raw.githubusercontent.com/88n77NODES/VANA/main/validator.sh)" 
 
 menu_options=("Встановити" "Оновити" "Видалити" "Деплой смарт-контракту DLP" "Встановлення валідатора" "Вийти")
 PS3='Оберіть дію: '
